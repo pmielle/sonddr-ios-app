@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "health_and_well_being.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
