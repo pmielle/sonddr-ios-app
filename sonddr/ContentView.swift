@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    init() {
+        let customToolbarAppearance = UINavigationBarAppearance()
+        customToolbarAppearance.configureWithOpaqueBackground()
+        customToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background"))
+        customToolbarAppearance.shadowColor = nil
+        UINavigationBar.appearance().standardAppearance = customToolbarAppearance
+        UINavigationBar.appearance().compactAppearance = customToolbarAppearance
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
