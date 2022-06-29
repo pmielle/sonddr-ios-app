@@ -9,13 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     
+    let loggedInUser = dummyUser
     let about = "Ea quidem voluptatum qui quasi repellendus et nostrum doloremque. Suscipit officiis veritatis non veritatis quod sunt quia minus molestiae. Dolores non voluptatem..."
     let goals: [Goal] = [
-        Goal(id: "no_poverty", name: "No poverty", order: 1),
-        Goal(id: "decent_work", name: "Decent work", order: 2),
-        Goal(id: "health_and_well_being", name: "Heath and well-being", order: 3),
-        Goal(id: "peace_and_justice", name: "Peace and justice", order: 4),
-        // ...
+        dummyGoal(id: "no_poverty", order: 1),
+        dummyGoal(id: "decent_work", order: 2),
     ]
     
     var body: some View {
@@ -24,6 +22,8 @@ struct HomeView: View {
                 Text(self.about)
                     .padding(.horizontal)
                 GoalChips(goals: self.goals)
+                    .padding(.bottom, 10)
+                IdeaList()
                 Spacer()
             }
             .padding(.top, 10)
@@ -37,7 +37,7 @@ struct HomeView: View {
                     .frame(width: 32)
             }
             ToolbarItem {
-                ProfilePicture()
+                ProfilePicture(user: self.loggedInUser)
             }
         }
     }

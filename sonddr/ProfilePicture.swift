@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ProfilePicture: View {
+    
+    let user: User
+    
     var body: some View {
-        Image("Placeholders/ProfilePicture")
+        Image(self.user.profilePicture)
             .resizable()
             .scaledToFit()
             .frame(width: 32)
@@ -24,6 +27,6 @@ struct ProfilePicture: View {
 
 struct ProfilePicture_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePicture()
+        ProfilePicture(user: dummyUser)
     }
 }

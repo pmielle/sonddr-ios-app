@@ -42,11 +42,8 @@ struct GoalChips: View {
 struct GoalChips_Previews: PreviewProvider {
     static var previews: some View {
         GoalChips(goals: [
-            Goal(id: "no_poverty", name: "No poverty", order: 1),
-            Goal(id: "decent_work", name: "Decent work", order: 2),
-            Goal(id: "health_and_well_being", name: "Heath and well-being", order: 3),
-            Goal(id: "peace_and_justice", name: "Peace and justice", order: 4),
-            // ...
+            dummyGoal(id: "no_poverty", order: 1),
+            dummyGoal(id: "decent_work", order: 2),
         ])
     }
 }

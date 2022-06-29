@@ -28,9 +28,6 @@ struct GoalChip: View {
 
 struct GoalChip_Previews: PreviewProvider {
     static var previews: some View {
-        GoalChip(goal: Goal(
-            id: "no_poverty",
-            name: "No poverty",
-            order: 1))
+        GoalChip(goal: dummyGoal())
     }
 }
