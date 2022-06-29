@@ -16,14 +16,36 @@ struct IdeaList: View {
     ]
     
     var body: some View {
-        LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
-            Section(header: sectionHeader(text: "Today")) {
-                ForEach(self.ideas) { idea in
-                    IdeaCard(idea: idea)
-                        .padding(.bottom, 10)
+        ZStack {
+            LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+                Section(header: sectionHeader(text: "Today")) {
+                    ForEach(self.ideas) { idea in
+                        IdeaCard(idea: idea)
+                            .padding(.bottom, 10)
+                    }
                 }
             }
+            VStack {
+                HStack {
+                    Spacer()
+                    sortBy
+                    
+                }
+                Spacer()
+            }
         }
+    }
+    
+    var sortBy: some View {
+        HStack(spacing: 10) {
+            Text("By date")
+                .padding(.vertical)
+            Image("Icons/SortBy")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20)
+        }
+        .padding(.horizontal)
     }
     
     func sectionHeader(text: String) -> some View {

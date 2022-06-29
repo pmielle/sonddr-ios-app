@@ -22,7 +22,7 @@ struct HomeView: View {
                 Text(self.about)
                     .padding(.horizontal)
                 GoalChips(goals: self.goals)
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 5)
                 IdeaList()
                 Spacer()
             }
