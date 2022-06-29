@@ -16,22 +16,35 @@ struct IdeaList: View {
     ]
     
     var body: some View {
-        LazyVStack(spacing: 10) {
-            ForEach(self.ideas) { idea in
-                IdeaCard(idea: idea)
+        LazyVStack(spacing: 0, pinnedViews: [.sectionHeaders]) {
+            Section(header: sectionHeader(text: "Today")) {
+                ForEach(self.ideas) { idea in
+                    IdeaCard(idea: idea)
+                        .padding(.bottom, 10)
+                }
             }
         }
+    }
+    
+    func sectionHeader(text: String) -> some View {
+        return HStack {
+            Text(text)
+            Spacer()
+        }
+        .padding()
+        .background(Color("Colors/Background"))
     }
 }
 
 struct IdeaList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ScrollView {
-                IdeaList()
+            ZStack {
+                Color("Colors/Background").ignoresSafeArea(.all)
+                ScrollView {
+                    IdeaList()
+                }
             }
         }
-        
-        
     }
 }
