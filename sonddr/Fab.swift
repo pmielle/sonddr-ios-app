@@ -24,9 +24,8 @@ struct Fab: View {
                     Image(systemName: self.icon)
                 }
             }
-            .padding(.trailing)
         }
-        .padding(.bottom)
+        .padding()
     }
 }
 

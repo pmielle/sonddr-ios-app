@@ -16,6 +16,9 @@ struct IdeaCard: View {
             Image(self.idea.cover)
                 .resizable()
                 .scaledToFit()
+                .overlay {
+                    self.goalBadges
+                }
             VStack(alignment: .leading, spacing: 5) {
                 Text(self.idea.title)
                     .font(.headline)
@@ -32,6 +35,23 @@ struct IdeaCard: View {
             .frame(maxWidth: .infinity)
             .padding()
         }
+    }
+    
+    var goalBadges: some View {
+        VStack {
+            Spacer()
+            HStack {
+                HStack(spacing: 10) {
+                    ForEach(self.idea.goals) { goal in
+                        GoalBadge(goal: goal)
+                    }
+                }
+                Spacer()
+            }
+        }
+        .padding(.leading)
+        .padding(.leading, 32 + 10)
+        .padding(.bottom, 10)
     }
 }
 

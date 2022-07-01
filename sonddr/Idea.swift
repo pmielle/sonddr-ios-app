@@ -18,5 +18,5 @@ struct Idea: Identifiable {
 }
 
 func dummyIdea() -> Idea {
-    return Idea(id: UUID().uuidString, title: "Dummy title", author: dummyUser, date: Date.now, goals: [dummyGoal()], rating: 66, cover: "Placeholders/CoverPicture")
+    return Idea(id: UUID().uuidString, title: "Dummy title", author: dummyUser, date: Date.now, goals: [dummyGoal(id: "no_poverty", order: 1), dummyGoal(id: "decent_work", order: 2)], rating: 66, cover: "Placeholders/CoverPicture")
 }

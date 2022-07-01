@@ -25,7 +25,7 @@ struct IdeaList: View {
                     }
                 }
             }
-            sortBy      
+            self.sortBy      
         }
     }
     
