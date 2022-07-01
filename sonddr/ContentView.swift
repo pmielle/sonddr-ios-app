@@ -10,22 +10,34 @@ import SwiftUI
 struct ContentView: View {
     
     init() {
-        let customToolbarAppearance = UINavigationBarAppearance()
-        customToolbarAppearance.configureWithOpaqueBackground()
-        customToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background"))
-        customToolbarAppearance.shadowColor = nil
-        UINavigationBar.appearance().standardAppearance = customToolbarAppearance
-        UINavigationBar.appearance().compactAppearance = customToolbarAppearance
+        let customTabBarAppearance = UITabBarAppearance()
+        customTabBarAppearance.configureWithOpaqueBackground()
+        customTabBarAppearance.backgroundColor = UIColor(Color("Colors/Background"))
+        customTabBarAppearance.shadowColor = nil
+        UITabBar.appearance().standardAppearance = customTabBarAppearance
+        UITabBar.appearance().scrollEdgeAppearance = customTabBarAppearance
     }
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("Colors/Background")
-                    .ignoresSafeArea(.all)
-                HomeView()
-            }
+        TabView {
+            IdeasView()
+                .tabItem {
+                    Label("", systemImage: "lightbulb")
+                }
+            Text("search view...")
+                .tabItem {
+                    Label("", systemImage: "magnifyingglass")
+                }
+            Text("messages view...")
+                .tabItem {
+                    Label("", systemImage: "bubble.left")
+                }
+            Text("notifications view...")
+                .tabItem {
+                    Label("", systemImage: "bell")
+                }
         }
+        
     }
 }
 

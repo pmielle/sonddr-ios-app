@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B8E40F2286F3354005539E7 /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F1286F3354005539E7 /* IdeasView.swift */; };
 		0BA7CC322861149300EF7A31 /* sonddrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7CC312861149300EF7A31 /* sonddrApp.swift */; };
 		0BA7CC342861149300EF7A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7CC332861149300EF7A31 /* ContentView.swift */; };
 		0BA7CC362861149500EF7A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA7CC352861149500EF7A31 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B8E40F1286F3354005539E7 /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
 		0BA7CC2E2861149300EF7A31 /* sonddr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sonddr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA7CC312861149300EF7A31 /* sonddrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sonddrApp.swift; sourceTree = "<group>"; };
 		0BA7CC332861149300EF7A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B8E40EF286F32F5005539E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B8E40F0286F3300005539E7 /* IdeasTab */,
+				0B8E40F1286F3354005539E7 /* IdeasView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B8E40F0286F3300005539E7 /* IdeasTab */ = {
+			isa = PBXGroup;
+			children = (
+				0BEE239C286BA1F800D52D56 /* HomeView.swift */,
+			);
+			path = IdeasTab;
+			sourceTree = "<group>";
+		};
 		0BA7CC252861149300EF7A31 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +90,10 @@
 		0BA7CC302861149300EF7A31 /* sonddr */ = {
 			isa = PBXGroup;
 			children = (
+				0B8E40EF286F32F5005539E7 /* Views */,
 				0BA7CC312861149300EF7A31 /* sonddrApp.swift */,
 				0BEE23A6286CE40400D52D56 /* Time.swift */,
 				0BA7CC332861149300EF7A31 /* ContentView.swift */,
-				0BEE239C286BA1F800D52D56 /* HomeView.swift */,
 				0BEE239E286CD29800D52D56 /* IdeaList.swift */,
 				0BEE23A2286CD2CC00D52D56 /* Idea.swift */,
 				0BEE23A4286CD2F300D52D56 /* User.swift */,
@@ -176,6 +195,7 @@
 				0BEE2395286B8F9000D52D56 /* GoalChip.swift in Sources */,
 				0BEE2399286B9D1500D52D56 /* ProfilePicture.swift in Sources */,
 				0BA7CC342861149300EF7A31 /* ContentView.swift in Sources */,
+				0B8E40F2286F3354005539E7 /* IdeasView.swift in Sources */,
 				0BEE239B286BA06900D52D56 /* GoalChips.swift in Sources */,
 				0BA7CC322861149300EF7A31 /* sonddrApp.swift in Sources */,
 				0BEE23A5286CD2F300D52D56 /* User.swift in Sources */,
