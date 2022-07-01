@@ -17,29 +17,33 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            VStack(spacing: 20) {
-                Text(self.about)
-                    .padding(.horizontal)
-                GoalChips(goals: self.goals)
-                    .padding(.bottom, 5)
-                IdeaList()
-                Spacer()
+        ZStack {
+            ScrollView {
+                VStack(spacing: 20) {
+                    Text(self.about)
+                        .padding(.horizontal)
+                    GoalChips(goals: self.goals)
+                        .padding(.bottom, 5)
+                    IdeaList()
+                    Spacer()
+                }
+                .padding(.top, 10)
             }
-            .padding(.top, 10)
+            .navigationTitle("All ideas")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Image("Logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 32)
+                }
+                ToolbarItem {
+                    ProfilePicture(user: self.loggedInUser)
+                }
+            }
+            Fab(color: Color("Colors/Primary"), icon: "plus")
         }
-        .navigationTitle("All ideas")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Image("Logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32)
-            }
-            ToolbarItem {
-                ProfilePicture(user: self.loggedInUser)
-            }
-        }
+        
     }
 }
 

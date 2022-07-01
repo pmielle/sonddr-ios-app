@@ -37,7 +37,6 @@ struct ContentView: View {
                     Label("", systemImage: "bell")
                 }
         }
-        
     }
 }
 

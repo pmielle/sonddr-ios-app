@@ -25,27 +25,26 @@ struct IdeaList: View {
                     }
                 }
             }
-            VStack {
-                HStack {
-                    Spacer()
-                    sortBy
-                    
-                }
-                Spacer()
-            }
+            sortBy      
         }
     }
     
     var sortBy: some View {
-        HStack(spacing: 10) {
-            Text("By date")
-                .padding(.vertical)
-            Image("Icons/SortBy")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 20)
+        VStack {
+            HStack {
+                Spacer()
+                HStack(spacing: 10) {
+                    Text("By date")
+                        .padding(.vertical)
+                    Image("Icons/SortBy")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 20)
+                }
+                .padding(.horizontal)
+            }
+            Spacer()
         }
-        .padding(.horizontal)
     }
     
     func sectionHeader(text: String) -> some View {
