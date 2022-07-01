@@ -22,19 +22,19 @@ struct ContentView: View {
         TabView {
             IdeasView()
                 .tabItem {
-                    Label("", systemImage: "lightbulb")
+                    Image(systemName: "lightbulb")
                 }
             Text("search view...")
                 .tabItem {
-                    Label("", systemImage: "magnifyingglass")
+                    Image(systemName: "magnifyingglass")
                 }
             Text("messages view...")
                 .tabItem {
-                    Label("", systemImage: "bubble.left")
+                    Image(systemName: "bubble.left")
                 }
             Text("notifications view...")
                 .tabItem {
-                    Label("", systemImage: "bell")
+                    Image(systemName: "bell")
                 }
         }
     }
