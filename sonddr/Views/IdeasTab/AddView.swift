@@ -27,11 +27,18 @@ struct AddView: View {
     // ------------------------------------------
     init(showAddView: Binding<Bool>) {
         self._showAddView = showAddView
+        // opaque toolbar
         let customToolbarAppearance = UINavigationBarAppearance()
-        customToolbarAppearance.configureWithOpaqueBackground()
-        customToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background").opacity(0.5))
+        customToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background"))
         customToolbarAppearance.shadowColor = nil
-        UINavigationBar.appearance().scrollEdgeAppearance = customToolbarAppearance
+        // semi-transparent toolbar
+        let semiTransparentToolbarAppearance = customToolbarAppearance.copy()
+        semiTransparentToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background").opacity(0.5))
+        // apply toolbar appearances
+        UINavigationBar.appearance().scrollEdgeAppearance = semiTransparentToolbarAppearance
+        UINavigationBar.appearance().compactScrollEdgeAppearance = semiTransparentToolbarAppearance
+        UINavigationBar.appearance().compactAppearance = customToolbarAppearance
+        UINavigationBar.appearance().standardAppearance = customToolbarAppearance
     }
     
     // body
