@@ -9,6 +9,8 @@ import SwiftUI
 
 struct AddView: View {
     
+    @Binding var showAddView: Bool
+    
     
     // properties
     // ------------------------------------------
@@ -23,7 +25,8 @@ struct AddView: View {
     
     // constructor
     // ------------------------------------------
-    init() {
+    init(showAddView: Binding<Bool>) {
+        self._showAddView = showAddView
         let customToolbarAppearance = UINavigationBarAppearance()
         customToolbarAppearance.configureWithOpaqueBackground()
         customToolbarAppearance.backgroundColor = UIColor(Color("Colors/Background").opacity(0.5))
@@ -72,7 +75,11 @@ struct AddView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Image(systemName: "xmark")
+                    Button(action: { self.onCloseClick() }) {
+                        Image(systemName: "xmark")
+                    }
+                    .foregroundColor(Color("Colors/Foreground"))
+                    
                 }
             }
 
@@ -82,6 +89,10 @@ struct AddView: View {
     
     // others
     // ------------------------------------------
+    func onCloseClick() {
+        showAddView = false
+    }
+    
     var uploadACover: some View {
         VStack(spacing: 5) {
             Image(systemName: "arrow.up.circle")
@@ -120,6 +131,6 @@ struct AddView: View {
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        AddView(showAddView: .constant(true))
     }
 }

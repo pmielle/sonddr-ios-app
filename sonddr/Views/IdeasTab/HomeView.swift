@@ -38,7 +38,7 @@ struct HomeView: View {
                 }
             )
             .sheet(isPresented: $showAddView) {
-                AddView()
+                AddView(showAddView: $showAddView)
             }
             
             
