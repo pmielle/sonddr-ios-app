@@ -11,17 +11,21 @@ struct Fab: View {
     
     let color: Color
     let icon: String
+    let action: () -> ()
     
     var body: some View {
         VStack {
             Spacer()
             HStack {
                 Spacer()
-                ZStack {
-                    RoundedRectangle(cornerRadius: 99)
-                        .fill(self.color)
-                        .frame(width: 60, height: 60)
-                    Image(systemName: self.icon)
+                Button(action: action) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 99)
+                            .fill(self.color)
+                            .frame(width: 60, height: 60)
+                        Image(systemName: self.icon)
+                            .foregroundColor(Color("Colors/Foreground"))
+                    }
                 }
             }
         }
@@ -31,6 +35,6 @@ struct Fab: View {
 
 struct Fab_Previews: PreviewProvider {
     static var previews: some View {
-        Fab(color: Color("Colors/Primary"), icon: "plus")
+        Fab(color: Color("Colors/Primary"), icon: "plus", action: {  })
     }
 }

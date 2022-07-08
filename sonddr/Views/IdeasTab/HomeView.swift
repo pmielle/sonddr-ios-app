@@ -15,6 +15,7 @@ struct HomeView: View {
         dummyGoal(id: "no_poverty", order: 1),
         dummyGoal(id: "decent_work", order: 2),
     ]
+    @State private var showAddView = false
     
     var body: some View {
         ZStack {
@@ -29,7 +30,19 @@ struct HomeView: View {
                 }
                 .padding(.top, 10)
             }
-            Fab(color: Color("Colors/Primary"), icon: "plus")
+            Fab(
+                color: Color("Colors/Primary"),
+                icon: "plus",
+                action: {
+                    showAddView = true
+                }
+            )
+            .sheet(isPresented: $showAddView) {
+                AddView()
+            }
+            
+            
+            
         }
         .navigationTitle("All ideas")
         .toolbar {
