@@ -12,7 +12,7 @@ struct GoalChip: View {
     let goal: Goal
     
     var body: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: 10) {
             Image("Goals/Icons/\(self.goal.id)")
                 .resizable()
                 .scaledToFit()

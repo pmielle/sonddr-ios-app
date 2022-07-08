@@ -10,6 +10,7 @@
 		0B8E40F2286F3354005539E7 /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F1286F3354005539E7 /* IdeasView.swift */; };
 		0B8E40F4286F3920005539E7 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F3286F3920005539E7 /* Fab.swift */; };
 		0B8E40F6286F3EAE005539E7 /* GoalBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */; };
+		0B8E40F828785A25005539E7 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F728785A25005539E7 /* AddView.swift */; };
 		0BA7CC322861149300EF7A31 /* sonddrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7CC312861149300EF7A31 /* sonddrApp.swift */; };
 		0BA7CC342861149300EF7A31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7CC332861149300EF7A31 /* ContentView.swift */; };
 		0BA7CC362861149500EF7A31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BA7CC352861149500EF7A31 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		0B8E40F1286F3354005539E7 /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
 		0B8E40F3286F3920005539E7 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
 		0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalBadge.swift; sourceTree = "<group>"; };
+		0B8E40F728785A25005539E7 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		0BA7CC2E2861149300EF7A31 /* sonddr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sonddr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA7CC312861149300EF7A31 /* sonddrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sonddrApp.swift; sourceTree = "<group>"; };
 		0BA7CC332861149300EF7A31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				0BEE239C286BA1F800D52D56 /* HomeView.swift */,
+				0B8E40F728785A25005539E7 /* AddView.swift */,
 			);
 			path = IdeasTab;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				0BA7CC342861149300EF7A31 /* ContentView.swift in Sources */,
 				0B8E40F2286F3354005539E7 /* IdeasView.swift in Sources */,
 				0BEE239B286BA06900D52D56 /* GoalChips.swift in Sources */,
+				0B8E40F828785A25005539E7 /* AddView.swift in Sources */,
 				0BA7CC322861149300EF7A31 /* sonddrApp.swift in Sources */,
 				0BEE23A5286CD2F300D52D56 /* User.swift in Sources */,
 				0B8E40F6286F3EAE005539E7 /* GoalBadge.swift in Sources */,

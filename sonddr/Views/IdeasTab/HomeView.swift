@@ -29,19 +29,19 @@ struct HomeView: View {
                 }
                 .padding(.top, 10)
             }
-            .navigationTitle("All ideas")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Image("Logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 32)
-                }
-                ToolbarItem {
-                    ProfilePicture(user: self.loggedInUser)
-                }
-            }
             Fab(color: Color("Colors/Primary"), icon: "plus")
+        }
+        .navigationTitle("All ideas")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image("Logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 32)
+            }
+            ToolbarItem {
+                ProfilePicture(user: self.loggedInUser)
+            }
         }
         
     }

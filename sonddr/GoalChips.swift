@@ -24,7 +24,7 @@ struct GoalChips: View {
     }
     
     var LearnMore: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: 10) {
             Image(systemName: "info.circle")
                 .resizable()
                 .scaledToFit()
