@@ -84,11 +84,11 @@ struct LogInView: View {
             Text("Log in")
                 .fontWeight(.bold)
                 .foregroundColor(Color("Colors/Foreground"))
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .background(Color("Colors/Green"))
+                .cornerRadius(20)
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 60)
-        .background(Color("Colors/Green"))
-        .cornerRadius(20)
     }
     
     var logInWithGoogleButton: some View {
@@ -102,11 +102,11 @@ struct LogInView: View {
                     .fontWeight(.bold)
                     .foregroundColor(Color("Colors/Foreground"))
             }
+            .frame(maxWidth: .infinity)
+            .frame(height: 60)
+            .background(Color("Colors/Foreground").opacity(0.5))
+            .cornerRadius(20)
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 60)
-        .background(Color("Colors/Foreground").opacity(0.5))
-        .cornerRadius(20)
     }
 }
 
