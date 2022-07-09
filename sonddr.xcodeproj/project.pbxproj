@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0AEFB3287A1A7C00166CA7 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AEFB2287A1A7C00166CA7 /* LogInView.swift */; };
 		0B8E40F2286F3354005539E7 /* IdeasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F1286F3354005539E7 /* IdeasView.swift */; };
 		0B8E40F4286F3920005539E7 /* Fab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F3286F3920005539E7 /* Fab.swift */; };
 		0B8E40F6286F3EAE005539E7 /* GoalBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B0AEFB2287A1A7C00166CA7 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		0B8E40F1286F3354005539E7 /* IdeasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeasView.swift; sourceTree = "<group>"; };
 		0B8E40F3286F3920005539E7 /* Fab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fab.swift; sourceTree = "<group>"; };
 		0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalBadge.swift; sourceTree = "<group>"; };
@@ -60,11 +62,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0AEFB1287A1A3300166CA7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0B8E40F3286F3920005539E7 /* Fab.swift */,
+				0BEE239E286CD29800D52D56 /* IdeaList.swift */,
+				0BEE23A0286CD2B400D52D56 /* IdeaCard.swift */,
+				0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */,
+				0BEE239A286BA06900D52D56 /* GoalChips.swift */,
+				0BEE2394286B8F9000D52D56 /* GoalChip.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		0B8E40EF286F32F5005539E7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				0B8E40F0286F3300005539E7 /* IdeasTab */,
 				0B8E40F1286F3354005539E7 /* IdeasView.swift */,
+				0B0AEFB2287A1A7C00166CA7 /* LogInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,19 +113,14 @@
 		0BA7CC302861149300EF7A31 /* sonddr */ = {
 			isa = PBXGroup;
 			children = (
+				0B0AEFB1287A1A3300166CA7 /* Components */,
 				0B8E40EF286F32F5005539E7 /* Views */,
 				0BA7CC312861149300EF7A31 /* sonddrApp.swift */,
 				0BEE23A6286CE40400D52D56 /* Time.swift */,
 				0BA7CC332861149300EF7A31 /* ContentView.swift */,
-				0B8E40F3286F3920005539E7 /* Fab.swift */,
-				0BEE239E286CD29800D52D56 /* IdeaList.swift */,
 				0BEE23A2286CD2CC00D52D56 /* Idea.swift */,
 				0BEE23A4286CD2F300D52D56 /* User.swift */,
-				0BEE23A0286CD2B400D52D56 /* IdeaCard.swift */,
-				0B8E40F5286F3EAE005539E7 /* GoalBadge.swift */,
-				0BEE239A286BA06900D52D56 /* GoalChips.swift */,
 				0BEE2398286B9D1500D52D56 /* ProfilePicture.swift */,
-				0BEE2394286B8F9000D52D56 /* GoalChip.swift */,
 				0BEE2396286B8F9F00D52D56 /* Goal.swift */,
 				0BA7CC352861149500EF7A31 /* Assets.xcassets */,
 				0BA7CC372861149500EF7A31 /* Preview Content */,
@@ -196,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BEE23A7286CE40400D52D56 /* Time.swift in Sources */,
+				0B0AEFB3287A1A7C00166CA7 /* LogInView.swift in Sources */,
 				0BEE239F286CD29800D52D56 /* IdeaList.swift in Sources */,
 				0BEE23A1286CD2B400D52D56 /* IdeaCard.swift in Sources */,
 				0BEE23A3286CD2CC00D52D56 /* Idea.swift in Sources */,
