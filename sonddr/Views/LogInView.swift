@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LogInView: View {
     
+    
     // properties
     // ------------------------------------------
     @State private var username = ""
@@ -60,10 +61,13 @@ struct LogInView: View {
                 }
                 .padding()
             }
-            .navigationTitle("Welcome back!")  // TODO: greetings depend on time of day
+            .navigationTitle("\(self.chooseGreetings()) 👋")
         }
     }
     
+    
+    // subviews
+    // ------------------------------------------
     var otherProviders: some View {
         Button(action: { /* ... */ }) {
             HStack(spacing: 10) {
@@ -108,6 +112,30 @@ struct LogInView: View {
             .cornerRadius(20)
         }
     }
+    
+    
+    // others
+    // ------------------------------------------
+    func chooseGreetings() -> String {
+        guard let hourOfTheDay = Calendar.current.dateComponents(in: .current, from: Date()).hour else {
+            print("failed to choose greetings")
+            return ""
+        }
+        switch hourOfTheDay {
+        case 0...3:
+            return "Good evening"
+        case 4...12:
+            return "Good morning"
+        case 13...19:
+            return "Good afternoon"
+        case 20...24:
+            return "Good evening"
+        default:
+            print("failed to choose greetings")
+            return ""
+        }
+    }
+    
 }
 
 struct LogInView_Previews: PreviewProvider {
