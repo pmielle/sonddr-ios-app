@@ -12,6 +12,7 @@ struct LogInView: View {
     
     // properties
     // ------------------------------------------
+    @EnvironmentObject var auth: AuthenticationService
     @State private var username = ""
     @State private var password = ""
     enum FocusedField {
@@ -96,7 +97,7 @@ struct LogInView: View {
     }
     
     var logInWithGoogleButton: some View {
-        Button(action: { /* ... */ }) {
+        Button(action: { auth.logIn() }) {
             HStack(spacing: 10) {
                 Image("GoogleLogo")
                     .resizable()
@@ -141,5 +142,6 @@ struct LogInView: View {
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
         LogInView()
+            .environmentObject(AuthenticationService())
     }
 }
