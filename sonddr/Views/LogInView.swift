@@ -13,79 +13,39 @@ struct LogInView: View {
     // properties
     // ------------------------------------------
     @EnvironmentObject var auth: AuthenticationService
-    @State private var username = ""
-    @State private var password = ""
-    enum FocusedField {
-            case username, password
-        }
-    @FocusState private var focusedField: FocusedField?
     
     
     // body
     // ------------------------------------------
     var body: some View {
-        NavigationView {
             ZStack {
-                Color("Colors/Background").ignoresSafeArea(.all)
-                VStack(spacing: 30) {
+                Color("Colors/Primary").ignoresSafeArea(.all)
+                VStack(spacing: 50) {
                     
                     Spacer()
                     
-                    // input fields
-                    VStack(spacing: 30) {
-                        TextField("Username", text: $username)
-                            .focused($focusedField, equals: .username)
-                        SecureField("Password", text: $password)
-                            .focused($focusedField, equals: .password)
-                    }
-                    .padding()
+                    Text("sonddr is place to share and contribute to each other ideas to make the world a little (or a more) better")
+                        .fontWeight(.bold)
+                        .font(.largeTitle)
                     
                     // buttons
                     VStack(spacing: 20) {
                         self.logInButton
-                        Text("or")
-                        self.logInWithGoogleButton
-                        HStack {
-                            self.otherProviders
-                            Spacer()
-                        }.padding(.horizontal)
+                        self.signUpButton
                     }
                     
                     Spacer()
                     
-                    HStack {
-                        Text("New here?").opacity(0.5)
-                        Text("Create an account")
-                    }
-
-                    
                 }
                 .padding()
             }
-            .navigationTitle("\(self.chooseGreetings()) 👋")
-        }
     }
     
     
     // subviews
     // ------------------------------------------
-    var otherProviders: some View {
-        Button(action: { /* ... */ }) {
-            HStack(spacing: 10) {
-                Image(systemName: "chevron.down")
-                Text("Other providers")
-            }
-            .padding(.horizontal, 10)
-            .padding(.vertical, 5)
-            .background(Color("Colors/Background"))
-            .foregroundColor(Color("Colors/Foreground"))
-            .cornerRadius(99)
-        }
-        
-    }
-    
     var logInButton: some View {
-        Button(action: { /* ... */ }) {
+        Button(action: { auth.logIn() }) {
             Text("Log in")
                 .fontWeight(.bold)
                 .foregroundColor(Color("Colors/Foreground"))
@@ -96,46 +56,22 @@ struct LogInView: View {
         }
     }
     
-    var logInWithGoogleButton: some View {
-        Button(action: { auth.logIn() }) {
-            HStack(spacing: 10) {
-                Image("GoogleLogo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: 26)
-                Text("Log in with Google")
-                    .fontWeight(.bold)
-                    .foregroundColor(Color("Colors/Foreground"))
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 60)
-            .background(Color("Colors/Foreground").opacity(0.5))
-            .cornerRadius(20)
+    var signUpButton: some View {
+        Button(action: { /* ... */ }) {
+            Text("Sign up")
+                .fontWeight(.bold)
+                .foregroundColor(Color("Colors/Foreground"))
+                .frame(maxWidth: .infinity)
+                .frame(height: 60)
+                .background(Color("Colors/Foreground").opacity(0.5))
+                .cornerRadius(20)
         }
     }
     
     
     // others
     // ------------------------------------------
-    func chooseGreetings() -> String {
-        guard let hourOfTheDay = Calendar.current.dateComponents(in: .current, from: Date()).hour else {
-            print("failed to choose greetings")
-            return ""
-        }
-        switch hourOfTheDay {
-        case 0...3:
-            return "Good evening"
-        case 4...12:
-            return "Good morning"
-        case 13...19:
-            return "Good afternoon"
-        case 20...24:
-            return "Good evening"
-        default:
-            print("failed to choose greetings")
-            return ""
-        }
-    }
+    // ...
     
 }
 
